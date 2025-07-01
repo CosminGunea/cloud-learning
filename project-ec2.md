@@ -20,23 +20,31 @@ Set up an Amazon EC2 instance, connect to it via SSH, install NGINX, and make a 
 2. Connect to EC2 via SSH
 Opened Git Bash and ran:
 
-bash gdwschmod 400 ~/cloud-learning/test-key-pare.pem
-ssh -i ~/cloud-learning/test-key-pare.pem ubuntu@18.132.40.196>
-Accepted the fingerprint warning by typing yes
-Successfully connected and saw:
-Welcome to Ubuntu 22.04 LTS
+- bash gdwschmod 400 ~/cloud-learning/test-key-pare.pem
+- ssh -i ~/cloud-learning/test-key-pare.pem ubuntu@18.132.40.196>
+- Accepted the fingerprint warning by typing yes
+- Successfully connected and saw:
+- Welcome to Ubuntu 22.04 LTS
+
+---
 
 3. Update Ubuntu Packages
-sudo apt update && sudo apt upgrade -y
+- sudo apt update && sudo apt upgrade -y
+
+---
 
 4. Install NGINX Web Server
-sudo apt install nginx -y
+- sudo apt install nginx -y
+
+---
 
 5. Enable HTTP Access in Security Group
-    Went to EC2 → Instances → Security Group
-    Edited Inbound Rules:
-    Added Rule: HTTP, port 80, source: Anywhere (0.0.0.0/0)
-    Saved the rule
+ -   Went to EC2 → Instances → Security Group
+ -   Edited Inbound Rules:
+ -   Added Rule: HTTP, port 80, source: Anywhere (0.0.0.0/0)
+ -   Saved the rule
+
+---
 
 6. Test the Web Server
     Opened a browser
@@ -44,11 +52,14 @@ sudo apt install nginx -y
 
     Saw the NGINX welcome page
    ![Screenshot 2025-07-01 200745](https://github.com/user-attachments/assets/27f684ca-d9d7-45f7-b77b-8a5992bbf4a9)
- What I Learned
+
+   ---
+8. What I Learned
 
 - How to launch a basic Ubuntu EC2 server.
 - How SSH keys work and how to connect securely.
 - How to install and run a web server in the cloud.
 - How to expose ports and make services publicly available
 
+---
 
